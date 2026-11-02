@@ -4,12 +4,13 @@
 ### پلتفرم مدرن، هوشمند و خودکفای پشتیبان‌گیری، کلون و مهاجرت وب‌سایت‌های وردپرسی
 
 [![Version](https://img.shields.io/badge/version-1.0.0--stable-blue.svg?style=for-the-badge)](https://github.com/Backupino/plugin)
-[![WordPress](https://img.shields.io/badge/WordPress-6.0%20--%206.7+-21759b.svg?style=for-the-badge&logo=wordpress)](https://wordpress.org)
+[![WordPress](https://img.shields.io/badge/WordPress-6.0%20--%207.1-21759b.svg?style=for-the-badge&logo=wordpress)](https://wordpress.org)
 [![PHP](https://img.shields.io/badge/PHP-7.4%20--%208.4-777bb4.svg?style=for-the-badge&logo=php)](https://php.net)
 [![License](https://img.shields.io/badge/License-GPL--2.0--or--later-green.svg?style=for-the-badge)](https://www.gnu.org/licenses/gpl-2.0.html)
+[![Plugin Check](https://img.shields.io/badge/Plugin%20Check-100%25%20Passed-success.svg?style=for-the-badge)](https://wordpress.org)
 [![Offline First](https://img.shields.io/badge/Architecture-100%25%20Offline--First-orange.svg?style=for-the-badge)](#معماری-آفلاین-فرست)
 
-[وب‌سایت رسمی](https://backupino.com) • [مخزن رسمی افزونه](https://github.com/Backupino/plugin) • [مخزن مستندات](https://github.com/Backupino/documents)
+[مخزن رسمی افزونه](https://github.com/Backupino/plugin) • [مخزن مستندات](https://github.com/Backupino/documents) • [پروفایل وردپرس](https://profiles.wordpress.org/backupino/)
 
 </div>
 
@@ -111,6 +112,5 @@
 * **مخزن رسمی افزونه:** [github.com/Backupino/plugin](https://github.com/Backupino/plugin)
 * **مخزن مستندات:** [github.com/Backupino/documents](https://github.com/Backupino/documents)
 * **ثبت گزارش و باگ:** [Issues on GitHub](https://github.com/Backupino/plugin/issues)
-* **سایت رسمی:** [backupino.com](https://backupino.com)
 
 </div>
