@@ -3,13 +3,13 @@
 # 📦 مستندات رسمی بکاپینو (Backupino)
 ### پلتفرم مدرن، هوشمند و خودکفای پشتیبان‌گیری، کلون و مهاجرت وب‌سایت‌های وردپرسی
 
-[![Version](https://img.shields.io/badge/version-1.0.0--stable-blue.svg?style=for-the-badge)](https://github.com/Backupino/dev)
+[![Version](https://img.shields.io/badge/version-1.0.0--stable-blue.svg?style=for-the-badge)](https://github.com/Backupino/plugin)
 [![WordPress](https://img.shields.io/badge/WordPress-6.0%20--%206.7+-21759b.svg?style=for-the-badge&logo=wordpress)](https://wordpress.org)
 [![PHP](https://img.shields.io/badge/PHP-7.4%20--%208.4-777bb4.svg?style=for-the-badge&logo=php)](https://php.net)
 [![License](https://img.shields.io/badge/License-GPL--2.0--or--later-green.svg?style=for-the-badge)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![Offline First](https://img.shields.io/badge/Architecture-100%25%20Offline--First-orange.svg?style=for-the-badge)](#معماری-آفلاین-فرست)
 
-[وب‌سایت رسمی](https://backupino.com) • [مخزن توسعه در گیت‌هاب](https://github.com/Backupino/dev) • [گزارش باگ و درخواست‌ها](https://github.com/Backupino/dev/issues)
+[وب‌سایت رسمی](https://backupino.com) • [مخزن رسمی افزونه](https://github.com/Backupino/plugin) • [مخزن مستندات](https://github.com/Backupino/documents)
 
 </div>
 
@@ -20,7 +20,7 @@
 ## 🌟 درباره مستندات رسمی بکاپینو
 
 به مخزن مستندات جامع و متمرکز **بکاپینو (Backupino)** خوش آمدید.  
-این مخزن به عنوان **دانشنامه مرجع و مرجع رسمی آموزش‌ها، راهنماهای کاربری، مقایسه‌ها، اسناد فنی و کدهای کمکی** برای جامعه توسعه‌دهندگان، مدیران وب‌سایت‌ها، شرکت‌های هاستینگ و طراحان سایت در سراسر جهان تدوین شده است.
+این مخزن به عنوان **دانشنامه مرجع و مرجع رسمی آموزش‌ها، راهنماهای کاربری، مقایسه‌ها، اسناد فنی و رفع اشکال** برای جامعه توسعه‌دهندگان، مدیران وب‌سایت‌ها، شرکت‌های هاستینگ و طراحان سایت در سراسر جهان تدوین شده است.
 
 بکاپینو با یک هدف اساسی متولد شد:  
 **«پایان دادن به باج‌گیری برای بازگردانی سایت، رهایی از خطاهای تایم‌اوت در هاست‌های ارزان و اشتراکی، و ارائه یک تجربه مهاجرت سریع، بومی و ۱۰۰٪ مستقل.»**
@@ -29,7 +29,7 @@
 
 ## 🗂 اطلس و فهرست دسته‌بندی‌شده مستندات
 
-جهت سهولت در مطالعه و دسترسی سریع، تمام مستندات در ۷ بخش ساختاریافته پارتیشن‌بندی شده‌اند:
+جهت سهولت در مطالعه و دسترسی سریع، تمام مستندات در ۶ بخش ساختاریافته پارتیشن‌بندی شده‌اند:
 
 ### ۱. شروع به کار و معرفی (Getting Started)
 * [**معرفی کامل بکاپینو و اهداف آن**](01-getting-started/01-introduction.md) — چرایی پیدایش، فلسفه معماری و تفاوت‌های کلیدی
@@ -69,10 +69,6 @@
 * [**پرسش‌های امنیتی و حریم خصوصی**](06-faq/02-security-and-privacy.md) — معماری آفلاین، حفاظت از پوشه پکیج‌ها و محرمانگی توکن‌ها
 * [**پرسش‌های مهاجرت، یونیکد و اسلاگ‌های فارسی**](06-faq/03-migration-and-unicode.md) — بازنویسی لینک‌ها، المنتور، ووکامرس و کاراکترهای خاص
 
-### ۷. نقشه راه و توسعه آینده (Roadmap)
-* [**مرور کامل امکانات نسخه ۱.۰.۰ رسمی (Free)**](07-roadmap/01-features-overview.md) — قابلیت‌های پایه تحویل داده شده و پایدار
-* [**نقشه راه فازهای آتی و افزودنی Pro**](07-roadmap/02-pro-plans-and-cloud.md) — اتصال ابری S3، گوگل‌درایو، دراپ‌باکس و پرتال اینترپرایز
-
 ---
 
 ## ⚡ در ۲ دقیقه با بکاپینو شروع کنید
@@ -107,9 +103,10 @@
 
 ## 🤝 مشارکت و گزارش خطاها
 
-ما به گرمی از پیشنهادات، گزارش باگ‌ها و مشارکت‌های توسعه‌دهندگان در پیشبرد و تکمیل مستندات و هسته نرم‌افزار استقبال می‌کنیم:
-* **مخزن توسعه هسته افزونه:** [github.com/Backupino/dev](https://github.com/Backupino/dev)
-* **ثبت ایشو و باگ:** [Issues on GitHub](https://github.com/Backupino/dev/issues)
+ما به گرمی از پیشنهادات، گزارش باگ‌ها و بازخوردهای جامعه کاربران و توسعه‌دهندگان استقبال می‌کنیم:
+* **مخزن رسمی افزونه:** [github.com/Backupino/plugin](https://github.com/Backupino/plugin)
+* **مخزن مستندات:** [github.com/Backupino/documents](https://github.com/Backupino/documents)
+* **ثبت گزارش و باگ:** [Issues on GitHub](https://github.com/Backupino/plugin/issues)
 * **سایت رسمی:** [backupino.com](https://backupino.com)
 
 </div>
