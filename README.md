@@ -1,116 +1,97 @@
-<div align="center">
+# 📦 Backupino Official Documentation
+### Modern, Resumable & Self-Contained WordPress Backup, Cloning & Easy Migration Platform
 
-# 📦 مستندات رسمی بکاپینو (Backupino)
-### پلتفرم مدرن، هوشمند و خودکفای پشتیبان‌گیری، کلون و مهاجرت وب‌سایت‌های وردپرسی
+<div align="center">
 
 [![Version](https://img.shields.io/badge/version-1.0.0--stable-blue.svg?style=for-the-badge)](https://github.com/Backupino/plugin)
 [![WordPress](https://img.shields.io/badge/WordPress-6.0%20--%207.1-21759b.svg?style=for-the-badge&logo=wordpress)](https://wordpress.org)
 [![PHP](https://img.shields.io/badge/PHP-7.4%20--%208.4-777bb4.svg?style=for-the-badge&logo=php)](https://php.net)
 [![License](https://img.shields.io/badge/License-GPL--2.0--or--later-green.svg?style=for-the-badge)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![Plugin Check](https://img.shields.io/badge/Plugin%20Check-100%25%20Passed-success.svg?style=for-the-badge)](https://wordpress.org)
-[![Offline First](https://img.shields.io/badge/Architecture-100%25%20Offline--First-orange.svg?style=for-the-badge)](#معماری-آفلاین-فرست)
+[![Offline First](https://img.shields.io/badge/Architecture-100%25%20Offline--First-orange.svg?style=for-the-badge)](#100-offline-first-architecture)
 
-[مخزن رسمی افزونه](https://github.com/Backupino/plugin) • [مخزن مستندات](https://github.com/Backupino/documents) • [پروفایل وردپرس](https://profiles.wordpress.org/backupino/)
+[Plugin Source](https://github.com/Backupino/plugin) • [Documentation Portal](https://github.com/Backupino/documents) • [WordPress Profile](https://profiles.wordpress.org/backupino/)
 
-</div>
-
----
-
-<div align="right" dir="rtl">
-
-## 🌟 درباره مستندات رسمی بکاپینو
-
-به مخزن مستندات جامع و متمرکز **بکاپینو (Backupino)** خوش آمدید.  
-این مخزن به عنوان **دانشنامه مرجع و مرجع رسمی آموزش‌ها، راهنماهای کاربری، مقایسه‌ها، اسناد فنی و رفع اشکال** برای جامعه توسعه‌دهندگان، مدیران وب‌سایت‌ها، شرکت‌های هاستینگ و طراحان سایت در سراسر جهان تدوین شده است.
-
-بکاپینو با یک هدف اساسی متولد شد:  
-**«پایان دادن به باج‌گیری برای بازگردانی سایت، رهایی از خطاهای تایم‌اوت در هاست‌های ارزان و اشتراکی، و ارائه یک تجربه مهاجرت سریع، بومی و ۱۰۰٪ مستقل.»**
-
----
-
-## 🗂 اطلس و فهرست دسته‌بندی‌شده مستندات
-
-جهت سهولت در مطالعه و دسترسی سریع، تمام مستندات در ۶ بخش ساختاریافته پارتیشن‌بندی شده‌اند:
-
-### ۱. شروع به کار و معرفی (Getting Started)
-* [**معرفی کامل بکاپینو و اهداف آن**](01-getting-started/01-introduction.md) — چرایی پیدایش، فلسفه معماری و تفاوت‌های کلیدی
-* [**کالبدشکافی معماری فنی**](01-getting-started/02-architecture.md) — موتور قطعه‌بندی‌شده Resumable، استریم خالص SQL و سیستم چک‌پوینت
-* [**پیش‌نیازهای سیستمی و سازگاری سرور**](01-getting-started/03-system-requirements.md) — نسخه‌های PHP، ماژول‌ها، وب‌سرورها و سطح دسترسی‌ها
-* [**راهنمای نصب و راه‌اندازی**](01-getting-started/04-installation-guide.md) — مخزن وردپرس، بارگذاری فایل Zip، نصب دستی FTP و دستورات خط فرمان WP-CLI
-
-### ۲. راهنمای گام‌به‌گام کاربری (User Guide)
-* [**تهیه نسخه پشتیبان (دستی و سفارشی)**](02-user-guide/01-creating-backups.md) — بکاپ کامل، فقط فایل، فقط دیتابیس و فیلترهای استثناسازی
-* [**مدیریت بسته‌ها، لاگ زنده و پاکسازی دیسک**](02-user-guide/02-backup-management.md) — بررسی وضعیت پیشرفت، لاگ‌های سیستمی و لغو آنی
-* [**لینک دائمی دانلود جدیدترین نسخه**](02-user-guide/03-permanent-download-link.md) — سازوکار کلید اختصاصی ۳۲ بایتی، احراز هویت ادمین و اتوماسیون
-* [**زمانبندی خودکار و سیاست نگهداری**](02-user-guide/04-scheduling-and-retention.md) — پشتیبان‌گیری منظم بر اساس گاه‌شمار خورشیدی و مدیریت حجم
-* [**راهنمای جامع بازگردانی و مهاجرت**](02-user-guide/05-restoration-and-migration.md) — انتقال از لوکال به هاست، تغییر دامنه، ساب‌دامین و Staging
-* [**کالبدشکافی نصاب مستقل (installer.php)**](02-user-guide/06-standalone-installer.md) — بررسی موشکافانه ۵ مرحله بازسازی سایت روی سرور خام
-* [**تور رابط کاربری و صفحات افزونه**](02-user-guide/07-ui-tour.md) — معرفی تصویری پیشخوان، تب‌های تنظیمات، نشانگرها و اعلان‌ها
-
-### ۳. یکپارچه‌سازی‌ها و پیام‌رسان‌ها (Integrations)
-* [**راه‌اندازی و اتصال ربات تلگرام**](03-integrations/01-telegram-bot.md) — ساخت بات در BotFather، استخراج Chat ID و پروتکل‌های امنیتی
-* [**راه‌اندازی و اتصال بازوی پیام‌رسان بله**](03-integrations/02-bale-bot.md) — ثبت بازو در بازوساز، دریافت توکن و سازگاری با شبکه ملی اطلاعات
-* [**سفارشی‌سازی الگوهای پیام و تگ‌ها**](03-integrations/03-notification-templates.md) — راهنمای متغیرهای داینامیک، استایل لینک‌ها و دکمه‌های شکیل
-
-### ۴. مقایسه‌ها و برتری‌های رقابتی (Comparisons)
-* [**مقایسه سر‌به‌سر با Duplicator**](04-comparisons/01-vs-duplicator.md) — بررسی تفاوت در مدیریت هاست‌های اشتراکی، پایداری و تبلیغات
-* [**مقایسه سر‌به‌سر با UpdraftPlus**](04-comparisons/02-vs-updraftplus.md) — تحلیل عمیق تفاوت ابزار صرفاً بکاپ با ابزار کلون و بازنویسی دامنه‌ها
-* [**مقایسه سر‌به‌سر با All-in-One WP Migration**](04-comparisons/03-vs-all-in-one-wp.md) — بررسی سقف‌های حجم مصنوعی و هزینه‌های بازگردانی
-* [**ماتریس و جدول جامع مقایسه بیش از ۳۰ ویژگی**](04-comparisons/04-comprehensive-matrix.md) — جدول کامل مقایسه‌ای بکاپینو در برابر تمامی رقبا
-
-### ۵. عیب‌یابی و حل مسائل میزبانی (Troubleshooting)
-* [**حل خطاهای دیتابیس و SQL**](05-troubleshooting/01-database-and-sql.md) — خطای max_allowed_packet، خطای Tablespace، کلیدهای خارجی و ایندکس‌ها
-* [**حل خطاهای تایم‌اوت، ۵۰۴ و حافظه RAM**](05-troubleshooting/02-timeout-and-memory.md) — تنظیمات php.ini، افزایش محدودیت‌ها و عملکرد موتور Resumable
-* [**مجوزهای دسترسی فایل‌ها و پوشه‌ها**](05-troubleshooting/03-file-permissions.md) — مالکیت www-data، سطح دسترسی ۷۵۵ و ۶۴۴ و فایل‌های موقت
-* [**تنظیمات اختصاصی هاست‌های cPanel و DirectAdmin**](05-troubleshooting/04-cpanel-and-directadmin.md) — پیشوند نام دیتابیس، دسترسی ALL PRIVILEGES
-* [**راهنمای محیط‌های محلی (Localhost)**](05-troubleshooting/05-local-development.md) — حل چالش‌های XAMPP، Laragon، LocalWP و Docker
-
-### ۶. پرسش‌های متداول (FAQ)
-* [**پرسش‌های متداول عمومی**](06-faq/01-general-faq.md) — کارکرد، قیمت‌گذاری رایگان، سقف حجم و پشتیبانی
-* [**پرسش‌های امنیتی و حریم خصوصی**](06-faq/02-security-and-privacy.md) — معماری آفلاین، حفاظت از پوشه پکیج‌ها و محرمانگی توکن‌ها
-* [**پرسش‌های مهاجرت، یونیکد و اسلاگ‌های فارسی**](06-faq/03-migration-and-unicode.md) — بازنویسی لینک‌ها، المنتور، ووکامرس و کاراکترهای خاص
-
----
-
-## ⚡ در ۲ دقیقه با بکاپینو شروع کنید
-
-### گام اول: ایجاد نسخه پشتیبان
-1. در پیشخوان وردپرس به منوی **بکاپینو (Backupino)** بروید.
-2. روی دکمه آبی‌رنگ **ایجاد پشتیبان** کلیک کنید.
-3. موتور قطعه‌بندی‌شده، بدون فریز کردن مرورگر در ۴ مرحله فایل‌ها و دیتابیس را بسته‌بندی کرده و فایل مستقل `installer.php` را تولید می‌کند.
-4. دکمه **دانلود همزمان** را بزنید تا هر دو فایل (`.zip` و `installer.php`) روی کامپیوتر شما ذخیره شوند.
-
-### گام دوم: بازگردانی روی هاست یا دامنه جدید
-1. در هاست جدید، پوشه ریشه (`public_html`) را باز کنید.
-2. فایل‌های `backupino-xxxx.zip` و `installer.php` را در آن آپلود کنید.
-3. آدرس `https://yourdomain.com/installer.php` را در مرورگر خود باز کرده و مراحل ویزارد ۵ مرحله‌ای را طی کنید.
-4. تمام! سایت شما با حفظ کامل اسلاگ‌های فارسی، تصاویر و جداول دیتابیس آماده بهره‌برداری است.
-
----
-
-## 🛡️ ویژگی‌های طلایی در یک نگاه
-
-| ویژگی | توضیح |
-|---|---|
-| **۱۰۰٪ رایگان برای همیشه** | ایجاد پشتیبان و بازگردانی و کلون، بدون هیچ‌گونه قفل یا سقف حجمی رایگان است. |
-| **ضد تایم‌اوت (Anti-Timeout)** | فرآیند در قطعات چند مگابایتی اجرا شده و در صورت قطعی دقیقاً از همان ثانیه ادامه می‌یابد. |
-| **نگهدارنده هوشمند تب (Browser Heartbeat)** | ادامه خودکار و بدون فریز فرآیند بکاپ به هنگام سوییچ بین تب‌ها به کمک لیسنر `visibilitychange`. |
-| **امنیت چندلایه و ضد Brute-Force** | مجهز به Rate Limiter روی لینک دائمی (۴۲۹ پس از ۵ خطا)، نانس‌های REST، و گارد سراسری `ABSPATH`. |
-| **ارتقای خودکار رم سرور** | افزایش هوشمند سقف حافظه PHP با `wp_raise_memory_limit` در مراحل اسکن و بایگانی. |
-| **نصاب مستقل خودکفا** | نیازی به نصب وردپرس در هاست مقصد نیست؛ `installer.php` همه چیز را خودکار بازسازی می‌کند. |
-| **لینک دائمی هوشمند** | آدرسی ثابت برای دانلود جدیدترین نسخه پشتیبان با احراز هویت امن مدیرکل. |
-| **اعلان آنی در بله و تلگرام** | گزارش لحظه‌ای پایان بکاپ و مهاجرت با پیام‌رسان‌های محبوب و لینک‌های کلیک‌پذیر. |
-| **تقویم بومی خورشیدی** | ثبت تاریخ‌ها و زمانبندی خودکار ماهانه در بامداد روز اول هر ماه شمسی. |
-| **معماری ۱۰۰٪ آفلاین-فرست** | بدون فراخوانی هیچ CDN خارجی، کاملاً مستقل و مناسب اینترانت و شبکه ملی. |
-
----
-
-## 🤝 مشارکت و گزارش خطاها
-
-ما به گرمی از پیشنهادات، گزارش باگ‌ها و بازخوردهای جامعه کاربران و توسعه‌دهندگان استقبال می‌کنیم:
-* **پروفایل رسمی مخزن وردپرس:** [profiles.wordpress.org/backupino](https://profiles.wordpress.org/backupino/)
-* **مخزن رسمی افزونه:** [github.com/Backupino/plugin](https://github.com/Backupino/plugin)
-* **مخزن مستندات:** [github.com/Backupino/documents](https://github.com/Backupino/documents)
-* **ثبت گزارش و باگ:** [Issues on GitHub](https://github.com/Backupino/plugin/issues)
+**Language**: **English (Default)** | [راهنمای فارسی (Persian)](fa/README.md)
 
 </div>
+
+---
+
+## 🌟 About Backupino Documentation
+
+Welcome to the central technical documentation and knowledge base for **Backupino**.  
+This repository serves as the official handbook, user guide, migration playbook, architectural specification, and troubleshooting encyclopedia for site owners, DevOps engineers, web agencies, and WordPress professionals worldwide.
+
+Backupino was engineered around one core philosophy:  
+**"Eliminating paywalls for site restoration, defeating timeout crashes on real-world shared hosting, and delivering an ultra-fast, 100% offline-first migration experience."**
+
+---
+
+## 🗂 Documentation Atlas & Table of Contents
+
+All guides are organized into 6 structured sections:
+
+### 1. Getting Started
+* [**01. Introduction & Philosophy**](en/01-getting-started/01-introduction.md) — Why Backupino was built, design philosophy, and core advantages.
+* [**02. Technical Architecture**](en/01-getting-started/02-architecture.md) — The resumable chunk engine, pure PHP SQL streamer, and checkpoint state machines.
+* [**03. System Requirements & Compatibility**](en/01-getting-started/03-system-requirements.md) — PHP versions, required modules, database drivers, and server permissions.
+* [**04. Installation & Setup Guide**](en/01-getting-started/04-installation-guide.md) — Dashboard upload, ZIP installation, FTP deployment, and WP-CLI commands.
+
+### 2. User Guide & Core Features
+* [**01. Creating Backups**](en/02-user-guide/01-creating-backups.md) — Full backup, database-only, files-only, and custom exclusion filters.
+* [**02. Backup Management & Live Logs**](en/02-user-guide/02-backup-management.md) — Monitoring job stages, inspecting live runtime logs, and instant cancellation.
+* [**03. Permanent Latest-Backup Download Link**](en/02-user-guide/03-permanent-download-link.md) — 32-byte secret key security, admin authentication, and automated off-site scripts.
+* [**04. Automated Scheduling & Retention Policies**](en/02-user-guide/04-scheduling-and-retention.md) — Monthly automated cron routines, Jalali calendar alignment, and package pruning.
+* [**05. Site Restoration & Migration Playbook**](en/02-user-guide/05-restoration-and-migration.md) — Moving from localhost to live server, domain switching, staging clones, and cross-host migration.
+* [**06. Standalone Installer (`installer.php`) Guide**](en/02-user-guide/06-standalone-installer.md) — Deep dive into the 5-step installer wizard, URL rewriting, and salt generation.
+* [**07. Admin UI Tour**](en/02-user-guide/07-ui-tour.md) — Complete overview of dashboard cards, tab navigation, and settings switches.
+
+### 3. Messenger Integrations & Alerts
+* [**01. Telegram Bot Integration**](en/03-integrations/01-telegram-bot.md) — Creating bots via @BotFather, extracting Chat IDs, and secure message dispatch.
+* [**02. Bale Messenger Integration**](en/03-integrations/02-bale-bot.md) — Configuring Bale bot tokens, local network delivery, and domestic intranet alerts.
+* [**03. Notification Templates & Retry Queues**](en/03-integrations/03-notification-templates.md) — Customizing Markdown alerts, token placeholders, and the 3-attempt fallback queue.
+
+### 4. Comparisons & Benchmarks
+* [**01. Backupino vs. Duplicator Lite**](en/04-comparisons/01-vs-duplicator.md) — Comparison of database limits, background chunking, and memory handling.
+* [**02. Backupino vs. UpdraftPlus Free**](en/04-comparisons/02-vs-updraftplus.md) — Comparison of standalone offline restoration versus core-dependent restores.
+* [**03. Backupino vs. All-in-One WP Migration**](en/04-comparisons/03-vs-all-in-one-wp.md) — Comparison of free upload/restore limits and file size restrictions.
+* [**04. Comprehensive Feature Matrix**](en/04-comparisons/04-comprehensive-matrix.md) — Head-to-head technical comparison across 25+ parameters.
+
+### 5. Troubleshooting & Playbooks
+* [**01. Database & SQL Issues**](en/05-troubleshooting/01-database-and-sql.md) — Resolving `max_allowed_packet`, foreign key constraints, character sets, and corrupted views.
+* [**02. Timeouts & Memory Optimization**](en/05-troubleshooting/02-timeout-and-memory.md) — Dealing with 30s FastCGI timeouts, `memory_limit` exhaustion, and slice tuning.
+* [**03. File Permissions & Directory Ownership**](en/05-troubleshooting/03-file-permissions.md) — Recommended 755/644 permissions, `wp-content` storage access, and read-only host fallbacks.
+* [**04. cPanel, DirectAdmin & Shared Hosting**](en/05-troubleshooting/04-cpanel-and-directadmin.md) — Tuning LiteSpeed, CloudLinux CageFS, Nginx reverse proxies, and OPcache.
+* [**05. Localhost Development (XAMPP, Laragon, Docker)**](en/05-troubleshooting/05-local-development.md) — Testing migrations locally, socket paths, and database users.
+
+### 6. Frequently Asked Questions (FAQ)
+* [**01. General FAQ**](en/06-faq/01-general-faq.md) — Common questions about limits, multisite support, and pricing.
+* [**02. Security & Privacy FAQ**](en/06-faq/02-security-and-privacy.md) — Package folder protection, brute-force rate limiting, and zero-telemetry architecture.
+* [**03. Migration & Unicode FAQ**](en/06-faq/03-migration-and-unicode.md) — Handling RTL text, emojis, Cyrillic/Persian/Arabic slugs, and serialized PHP structures.
+
+---
+
+## ⚡ Architectural Highlights
+
+| Feature | Technical Implementation |
+| :--- | :--- |
+| **Anti-Timeout Engine** | Slices heavy jobs into incremental micro-batches, resuming seamlessly from exact database checkpoints. |
+| **Browser Heartbeat** | Listens to `visibilitychange` to maintain background processing across inactive browser tabs. |
+| **Multi-Layer Security** | Protected by Rate Limiting on permanent links (HTTP 429 after 5 failures), REST nonces, and `.htaccess`/`web.config` locks. |
+| **Auto Memory Escalation** | Safely calls `wp_raise_memory_limit('admin')` during intensive scanning and compression stages. |
+| **Standalone Installer** | Requires zero pre-installed WordPress core on destination hosts; `installer.php` rebuilds everything. |
+| **Smart Permanent Link** | Static URL for fetching latest backups with strict administrator capability checks (`manage_options`). |
+| **Dual Messenger Dispatch** | Instant alerts to Telegram and Bale with formatted file sizes, execution times, and download links. |
+| **Dual Calendar Support** | Solar Hijri (Jalali) calculations for Persian locales and Gregorian for international setups. |
+| **100% Offline-First** | Zero remote scripts, zero CDN dependencies, zero external fonts. Completely safe for intranets. |
+
+---
+
+## 🤝 Community & Support
+
+* **WordPress.org Profile:** [profiles.wordpress.org/backupino](https://profiles.wordpress.org/backupino/)
+* **Plugin Source Repository:** [github.com/Backupino/plugin](https://github.com/Backupino/plugin)
+* **Documentation Repository:** [github.com/Backupino/documents](https://github.com/Backupino/documents)
+* **Bug Reports & Issues:** [GitHub Issues](https://github.com/Backupino/plugin/issues)
+* **Persian Documentation:** [راهنمای فارسی مستندات](fa/README.md)
