@@ -32,9 +32,14 @@ You designed a client's website in a local development environment (e.g., LocalW
 3. **Running the Standalone Installer:**
    * Open your browser and navigate to the standalone installer endpoint:  
      `https://yourdomain.com/installer.php`
-   * Proceed through the 5-step deployment wizard (enter new database credentials and test the connection).
-   * In Step 4, the source URL (`http://localhost/site`) is auto-detected and pre-populated for replacement with your target live domain (`https://yourdomain.com`).
-   * In Step 5, click **Admin Login**. The deployment wizard automatically purges installer runtime assets, leaving the live site production-ready.
+   * Proceed through the 7-step deployment wizard:
+     * **Step 1 (System Validation):** Automatic pre-flight verification of PHP version, ZipArchive extension, and directory write permissions.
+     * **Step 2 (Database Connection):** Enter MySQL connection parameters (host, user, password, database) and click **Test Connection**.
+     * **Step 3 (Database Options):** Configure character set and custom table prefix (e.g. `jvd_` or maintain source prefix). Backupino synchronizes all user capabilities and option prefix keys (`usermeta` / `options`), ensuring administrators are never locked out.
+     * **Step 4 (Extraction & Import):** Progressively extracts files with automatic server configuration quarantine (`.htaccess.backupino-orig`) and streams the SQL dump without memory spikes.
+     * **Step 5 (Search & Replace):** Automatically maps source URL (`http://localhost/site`) to the target URL (`https://yourdomain.com`). Deep search-and-replace parses JSON objects, preserves Elementor dynamic tags, and updates raw/encoded UTF-8 Persian slugs with string length corrections.
+     * **Step 6 (Administrator Account):** Verify existing administrator credentials or optionally provision a fresh admin account with a custom password.
+     * **Step 7 (Final Verification & Cleanup):** Click the green **Admin Login & Remove Installer Files** button. All temporary runtime files and archive packages are purged securely.
 
 ---
 
@@ -47,7 +52,7 @@ Migrate an existing website from one domain to another (e.g., from `oldbrand.com
 1. On the old domain, generate a full backup using Backupino and download both the archive file and `installer.php`.
 2. On the new domain's hosting account, upload both files to the target web root directory.
 3. Open `https://newbrand.com/installer.php` in your browser.
-4. In Step 4 (URL & Path Replacement), the form automatically maps the old URL and new URL.
+4. In Step 5 (URL & Path Replacement), the form automatically maps the old URL and new URL.
 5. Click Next. Backupino's deep search-and-replace engine updates all database tables—correctly recalculating string length offsets in serialized PHP arrays and JSON payloads.
 
 ---
@@ -67,5 +72,5 @@ Establish an isolated, exact replica of your production website on a testing sub
 
 ## 🧭 Next Step
 
-For an in-depth technical analysis of each of the 5 installer phases, consult:  
+For an in-depth technical analysis of each of the 7 installer phases and quarantine safeguards, consult:  
 👉 [**Anatomy of the Standalone Installer (`installer.php`)**](06-standalone-installer.md)

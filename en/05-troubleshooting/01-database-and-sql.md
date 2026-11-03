@@ -8,13 +8,13 @@
 ## 🛠️ 1. `Got a packet bigger than 'max_allowed_packet' bytes` Error
 
 ### Symptom:
-During database import in Step 3 of the Standalone Installer (`installer.php`), you encounter a connection loss or maximum packet size exceeded error. This error typically occurs on tables such as `wp_options` (with heavy transient records or Elementor cache).
+During database import in Step 4 of the Standalone Installer (`installer.php`), you encounter a connection loss or maximum packet size exceeded error. This error typically occurs on tables such as `wp_options` (with heavy transient records or Elementor cache).
 
 ### Root Cause:
 The target MySQL server has a low threshold for the `max_allowed_packet` variable (for example, 1 MB or 4 MB), and a single database row containing large payloads exceeds this ceiling.
 
 ### Solutions:
-1. **Backupino Automatic Mechanism:** Backupino's SQL streamer intelligently breaks down multi-row statements and batches them into safe packets.
+1. **Backupino Automatic Mechanism:** Backupino's SQL streamer intelligently breaks down large multi-row `INSERT` statements into micro-chunks and batches them into safe packets to prevent exceeding buffer limits.
 2. **Increase the value on the MySQL server:**
    * In the MySQL configuration file (`my.ini` on Windows/Localhost or `/etc/mysql/my.cnf` on Linux) under the `[mysqld]` section, add the following line and restart the database server:
      ```ini
@@ -27,25 +27,26 @@ The target MySQL server has a low threshold for the `max_allowed_packet` variabl
 
 ---
 
-## 🛠️ 2. `Tablespace for table '...' exists. Please DISCARD the tablespace` Error
+## 🛠️ 2. `Tablespace for table '...' exists. Please DISCARD the tablespace` (InnoDB Error 1813)
 
 ### Symptom:
-While creating a new table in MariaDB or MySQL, you encounter the following error:
+While creating a new table in MariaDB or MySQL during Step 4 of the installer, you encounter:
 ```text
-Tablespace for table '`backupino_test`.`wp_backupino_jobs`' exists. Please DISCARD the tablespace before IMPORT
+❌ [ERROR]: Tablespace for table '`db_name`.`wp_table`' exists. Please DISCARD the tablespace before IMPORT
 ```
 
-### Root Cause:
-During previous import attempts, the process was abruptly aborted, or the table was dropped in the database metadata while the physical table file (`.ibd`) remained locked on the server disk and was not purged.
+### Technical Cause:
+InnoDB and XtraDB engines store individual tables in dedicated physical `.ibd` files. If previous test attempts were interrupted, or if tables were dropped in the database metadata while the physical files remained locked on disk, the MySQL engine refuses to create a new table under that name because an orphaned `.ibd` file exists on the filesystem without a dictionary catalog entry.
 
 ### Solutions:
-1. **Backupino Automatic Recovery:** Upon encountering this error, Backupino's import engine automatically issues an `ALTER TABLE ... DISCARD TABLESPACE` command to clean up orphaned tablespace before re-importing.
-2. **Manual Solution in phpMyAdmin:**
-   * Run the following query:
-     ```sql
-     DROP TABLE IF EXISTS `wp_backupino_jobs`;
-     ```
-   * Or if needed, drop and recreate the test database entirely (`CREATE DATABASE ...`).
+1. **Backupino Automatic Recovery:** Upon detecting this condition, Backupino's import engine automatically issues an unblock sequence to discard the orphaned tablespace and re-attempt table creation:
+   ```sql
+   DROP TABLE IF EXISTS `wp_table`;
+   ALTER TABLE `wp_table` DISCARD TABLESPACE;
+   ```
+2. **Control Panel / phpMyAdmin Solution:**
+   * If you are performing test migrations into a temporary database, dropping the database completely and creating a fresh database with the same name clears all locked physical files.
+   * On local development stacks (XAMPP/Laragon), ensure no stray background `mysqld.exe` processes hold open locks on the data directory.
 
 ---
 

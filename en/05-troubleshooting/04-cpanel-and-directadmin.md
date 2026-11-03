@@ -34,6 +34,31 @@ If your backup archive is large (e.g., above 500 MB) and the web-based cPanel Fi
 
 ---
 
+## 🛠️ 3. LiteSpeed & Apache Internal Server Error (HTTP 500)
+
+### Symptom:
+During archive extraction in Step 4 of the standalone installer on cPanel/DirectAdmin servers powered by LiteSpeed Web Server or CloudLinux CageFS, an AJAX extraction request abruptly terminates with:
+```text
+CRITICAL: Extraction failed: Internal Server Error (HTTP 500)
+```
+
+### Root Cause:
+WordPress backup archives contain sensitive web server configuration files from the source server, specifically `.htaccess`, `.user.ini`, `php.ini`, and `wp-config.php`. These files frequently contain environment-specific directives—such as custom PHP binary handlers (`AddHandler application/x-httpd-ea-php81`), absolute cache paths for LiteSpeed Cache, security module rules (e.g. Wordfence WAF auto-prepend), or custom rewrite rules tied to the old filesystem layout.  
+If these files are directly extracted into the live document root during Step 4, the destination web server (especially LiteSpeed) parses the incompatible directives immediately, causing all subsequent incoming PHP requests—including the installer's own AJAX extraction chunks—to abort with HTTP 500.
+
+### Backupino Safe Quarantine Extraction:
+Backupino prevents this crash entirely through its **Safe Quarantine Extraction Architecture**:
+1. During Step 4 extraction, environment-sensitive configuration files from the archive are automatically quarantined with a safe suffix:
+   * `.htaccess` $\to$ `.htaccess.backupino-orig`
+   * `.user.ini` $\to$ `.user.ini.backupino-orig`
+   * `php.ini` $\to$ `php.ini.backupino-orig`
+   * `wp-config.php` $\to$ `wp-config.php.backupino-orig`
+2. Because these legacy directives remain quarantined, the installer completes all chunked AJAX extraction operations cleanly without triggering LiteSpeed or Apache 500 errors.
+3. In Step 5, the installer writes a brand new, clean `wp-config.php` specifically configured for the target database and generates a standard WordPress `.htaccess` file.
+4. If your source site had custom redirects or custom rewrite rules, `.htaccess.backupino-orig` is preserved on disk for manual inspection and verification.
+
+---
+
 ## 🧭 Next Steps
 
 To troubleshoot local development environments (XAMPP, Laragon, Docker), proceed to the following guide:  

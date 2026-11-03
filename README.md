@@ -44,7 +44,7 @@ All guides are organized into 6 structured sections:
 * [**03. Permanent Latest-Backup Download Link**](en/02-user-guide/03-permanent-download-link.md) — 32-byte secret key security, admin authentication, and automated off-site scripts.
 * [**04. Automated Scheduling & Retention Policies**](en/02-user-guide/04-scheduling-and-retention.md) — Monthly automated cron routines, Jalali calendar alignment, and package pruning.
 * [**05. Site Restoration & Migration Playbook**](en/02-user-guide/05-restoration-and-migration.md) — Moving from localhost to live server, domain switching, staging clones, and cross-host migration.
-* [**06. Standalone Installer (`installer.php`) Guide**](en/02-user-guide/06-standalone-installer.md) — Deep dive into the 5-step installer wizard, URL rewriting, and salt generation.
+* [**06. Standalone Installer (`installer.php`) Guide**](en/02-user-guide/06-standalone-installer.md) — Deep dive into the 7-step installer wizard, URL rewriting, server config quarantine, and salt generation.
 * [**07. Admin UI Tour**](en/02-user-guide/07-ui-tour.md) — Complete overview of dashboard cards, tab navigation, and settings switches.
 
 ### 3. Messenger Integrations & Alerts
@@ -69,6 +69,24 @@ All guides are organized into 6 structured sections:
 * [**01. General FAQ**](en/06-faq/01-general-faq.md) — Common questions about limits, multisite support, and pricing.
 * [**02. Security & Privacy FAQ**](en/06-faq/02-security-and-privacy.md) — Package folder protection, brute-force rate limiting, and zero-telemetry architecture.
 * [**03. Migration & Unicode FAQ**](en/06-faq/03-migration-and-unicode.md) — Handling RTL text, emojis, Cyrillic/Persian/Arabic slugs, and serialized PHP structures.
+
+---
+
+## 🏷️ Custom Versioning Specification
+
+Backupino adheres to a precise, customized versioning scheme across all source releases and official documentation:
+
+$$\mathbf{Major} \,.\, \mathbf{Minor} \,.\, \mathbf{Patch}$$
+
+1. **Patch Component (Rightmost — Bug Fixes & Refinements):**
+   * Strictly bounded to single digits **0 through 9**.
+   * Rolling over past `9` resets Patch to `0` and increments Minor:
+     $$\mathbf{1.0.0} \to \mathbf{1.0.1} \to \dots \to \mathbf{1.0.9} \implies \mathbf{1.1.0}$$
+2. **Minor Component (Middle — Feature Iterations & Enhancements):**
+   * **Unbounded** ($0 \dots \infty$). Progresses seamlessly beyond single digits:
+     $$\mathbf{1.9.9} \implies \mathbf{1.10.0} \implies \mathbf{1.10.1} \dots \implies \mathbf{1.25.0}$$
+3. **Major Component (Leftmost — Foundational Architectural Overhauls):**
+   * Bounded between **1 and 9**. Increments exclusively upon fundamental architectural redesigns.
 
 ---
 

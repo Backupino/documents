@@ -1,66 +1,74 @@
-# 6. Detailed Anatomy of the 5-Stage Standalone Installer (`installer.php`)
+# 6. Detailed Anatomy of the Standalone Installer (`installer.php`)
 
 > **Section:** User Guide • **Stable Version:** 1.0.0 Official • **Last Updated:** November 2026  
 > **Audience:** Developers, DevOps Engineers, and Website Administrators Performing Restorations
 
 ---
 
-## 🧭 Modern Site Restoration Stepper Wizard
+## 🧭 Modern Self-Contained Site Restoration Wizard
 
-The `installer.php` file is an ultra-lightweight (~80 KB), standalone engineering script that requires zero existing WordPress footprint on the destination host. It delivers an intuitive user experience featuring a 5-stage interactive stepper wizard with bidirectional navigation:
+Backupino's standalone installer script is an ultra-lightweight (~80 KB) engineering solution that requires zero existing WordPress footprint on the destination server. Built upon a resilient chunked-processing architecture (AJAX ticks), it eliminates PHP execution timeouts and memory exhaustion across large enterprise sites:
+
+### 📦 Dual File Naming for User Convenience
+1. **`installer.php`**: The file downloaded directly from the WordPress Admin Dashboard via the "Download Installer" button, or copied from the packages folder.
+2. **`[site]_[timestamp]-installer.php`**: The timestamped file stored automatically in `wp-content/backupino/packages/` alongside the archive, ensuring multiple backup packages within a directory never collide.
+> Both files are **100% byte-for-byte identical** in content and capability.
 
 ---
 
 ### Step 1: Environment & Archive Verification
-
-* **Core Prerequisites Audit:** Checks PHP version, ZipArchive/PclZip extensions, PDO/mysqli database drivers, and active memory allocation limits.
-* **Filesystem Write Permissions:** Validates that the current target directory is writable (`is_writable`).
-* **Automatic Archive Discovery:** The installer automatically scans the local directory for the matching `.zip` backup package, displaying its file size and metadata manifest attributes immediately.
-
----
-
-### Step 2: Database Connection & Verification
-
-* **Connection Parameters:**
-  * Hostname (Database Host — typically `localhost` or custom port/socket)
-  * Database Name
-  * Database Username
-  * Database Password
-* **Test Connection Feature:**  
-  Before continuing, click **Test Connection** to verify database connectivity, retrieve server engine versions (MySQL / MariaDB), and inspect existing table counts.
-* **Clean Install Mode:**  
-  If the destination database already contains existing tables, an explicit safety prompt allows you to empty or safely overwrite conflicting tables.
+* **System Prerequisites Audit:** Checks PHP version (PHP 7.4 through 8.4+), required extensions (`ZipArchive`/`PclZip`, `mysqli`, `pdo_mysql`), and memory limits.
+* **Filesystem Write Permissions:** Validates that the current target directory is fully writable (`is_writable`).
+* **Cryptographic Token & Hash Pairing:** Scans for the matching `.zip` archive, pairing the embedded 32-character security token and SHA-256 archive hash to eliminate package mismatch risks.
 
 ---
 
-### Step 3: Archive Extraction & Database Streaming
-
-* **Resumable Chunk-Based Archive Extraction:** Instead of attempting to extract tens of thousands of files in a single synchronous call, extraction is processed in manageable chunks (e.g., 300 files per cycle) with a live progress log, entirely preventing web server execution timeouts.
-* **Chunked SQL Import Engine:**  
-  * Executes `SET FOREIGN_KEY_CHECKS = 0` to eliminate foreign key constraint locks during batch restoration.
-  * Streams database statements in 250-row chunks using an optimized 256 KB memory buffer with duplicate key handling (`INSERT IGNORE`).
-  * **Comprehensive MySQL Views Compatibility:** Automatically strips incompatible `DEFINER` clauses and prepends `DROP VIEW IF EXISTS`, ensuring seamless import across servers with differing database users.
-  * Dynamically resolves `Tablespace exists` conflicts on MariaDB and modern MySQL 8+.
+### Step 2: Database Connection & Prefix Customization
+* **Database Parameters:** Hostname (including port/socket), Database Name, Username, and Password.
+* **Custom Table Prefix:** Option to retain the existing prefix or set an entirely new prefix (e.g., changing from `wp_` to `custom_`); Backupino automatically updates table names, views, and prefix-dependent options (`wp_user_roles`, `wp_capabilities`).
+* **Test Connection:** Live connectivity check reporting database engine version (MySQL / MariaDB) and table count.
+* **Clean Install / Empty DB:** Safely drops pre-existing conflicting tables and views if clean installation is selected.
 
 ---
 
-### Step 4: Search & Replace and Domain Transformation
-
-* **Automated URL & Path Detection:**  
-  The source site URL/path from the archive manifest and the target host URL/path are automatically detected and populated in the input fields.
-* **Deep Serializer Engine:**  
-  Complex nested arrays stored within database options and metadata tables (particularly Elementor page builder data, sliders, widgets, and block settings) are recursively parsed, string occurrences replaced, and byte lengths re-serialized with mathematical precision.
-* **Slug & Unicode Preservation:** Full support for non-Latin characters, UTF-8 multibyte strings, and URL-encoded slugs without corruption.
-* **Cryptographic Salt Generation:** Generates a clean, cryptographically hardened `wp-config.php` file with fresh security authentication keys and salts.
+### Step 3: Chunked File Extraction & Web Server Quarantine
+* **Slice-Based Extraction (300 files/tick):** Extracts tens of thousands of files across small synchronous requests, guaranteeing web server execution limits are respected.
+* **🛡️ Smart Server Config Quarantine (Zero 500 Server Errors):**
+  * On shared Linux servers running LiteSpeed or Apache (cPanel, DirectAdmin, CloudLinux), extracting the source site's `.htaccess`, `.user.ini`, `php.ini`, and `wp-config.php` immediately can trigger severe **500 Internal Server Errors** due to conflicting PHP handlers (`ea-php81`), LiteSpeed Cache directives, or outdated WAF prepend paths.
+  * Backupino automatically quarantines these configuration files during extraction as `.backupino-orig`, guaranteeing that the web server remains 100% stable throughout the entire migration wizard.
 
 ---
 
-### Step 5: Final Verification & Automated Security Cleanup
+### Step 4: Resilient SQL Import & InnoDB Tablespace Recovery
+* **Packet Size Auto-Splitting:** Large multi-row `INSERT` statements exceeding the database's `max_allowed_packet` are dynamically split into micro-statements without corrupting data tuples.
+* **MariaDB & MySQL 8+ Error Resilience:**
+  * Automatically recovers from MariaDB orphan tablespace collisions (`Tablespace exists - Error 1813`).
+  * Enforces `SET FOREIGN_KEY_CHECKS = 0` and unique check disabling.
+  * Automatically sanitizes incompatible `DEFINER` clauses and handles views gracefully.
 
-* Comprehensive summary report detailing restored file tallies, database records, and processing duration.
-* Optional instant dispatch of restoration success alerts to Bale or Telegram bots (if configured in source settings).
-* **Direct WordPress Admin Login:**  
-  Clicking **Admin Login** securely launches your WordPress dashboard while automatically purging `installer.php` and runtime temporary deployment artifacts to maintain airtight server security.
+---
+
+### Step 5: Deep Search & Replace, Elementor Tags & Persian Slugs
+* **Automated URL Mapping:** Detects source site URL and target domain automatically.
+* **Deep Serializer Engine:**
+  * Recursively unpacks nested PHP serialized strings, updating URLs and recalculating byte-length descriptors accurately.
+  * Traverses and rewrites JSON-encoded strings.
+  * **Elementor Dynamic Tag Preservation:** Perfectly preserves URL-encoded JSON dynamic tag syntax (`settings="%7B%7D"`).
+  * **Persian & Unicode Slug Preservation:** Preserves non-Latin UTF-8 slugs in `post_name` and URL paths without corruption or loss.
+
+---
+
+### Step 6: WordPress Configuration & Standard `.htaccess` Generation
+* **Fresh `wp-config.php` Generation:** Synthesizes clean configuration with cryptographically secure random authentication salts while preserving custom user-defined constants from the source config.
+* **Standard `.htaccess` Generation:** Dynamically writes a standard WordPress `.htaccess` rule set configured with the exact `RewriteBase` matching the target directory (root or subdirectory).
+* **Custom Login Slug Detection:** Automatically detects customized login endpoints configured by security plugins (WPS Hide Login, AIOWPS, etc.).
+
+---
+
+### Step 7: Final Report, Security Cleanup & Direct Admin Login
+* Comprehensive statistics display: extracted files, executed SQL queries, and updated database fields.
+* Sends automated notification to Bale or Telegram bots if enabled.
+* **Delete Installer Files & Login:** Safely purges the installer script, archive zip, SQL dump, state files, and all quarantined `.backupino-orig` files before redirecting to the WordPress login screen.
 
 ---
 

@@ -42,12 +42,13 @@ Backupino enables you to receive site backup and restore status reports directly
 ## ⚙️ Configuration in the Backupino Dashboard
 
 1. In your WordPress admin dashboard, navigate to **Backupino → Settings → Notifications tab**.
-2. Configure the following fields:
-   * **Messenger Service:** `Telegram`
+2. Configure the Telegram section as follows:
+   * **Enable Telegram Notifications:** Toggle the Telegram switch to the active position. (Backupino provides independent on/off switches for Telegram and Bale; enabling or disabling one has no effect on the other).
    * **Bot Token:** Paste the token received from BotFather.
    * **Chat ID:** Enter your numeric Chat ID.
 3. Click **Save Settings**.
 4. Click **Send Test Message**. Within seconds, a test notification featuring clickable links will arrive in your Telegram chat, verifying successful connectivity!
+5. **Disabling Notifications:** Whenever you wish to suspend Telegram notifications, simply turn off the toggle switch. The saved token and Chat ID remain securely stored, but no network requests will be dispatched to Telegram.
 
 ---
 
