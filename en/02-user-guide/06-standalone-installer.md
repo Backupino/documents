@@ -1,6 +1,6 @@
 # 6. Detailed Anatomy of the Standalone Installer (`installer.php`)
 
-> **Section:** User Guide • **Stable Version:** 1.0.0 Official • **Last Updated:** November 2026  
+> **Section:** User Guide • **Stable Version:** 1.0.1 Official • **Last Updated:** November 2026  
 > **Audience:** Developers, DevOps Engineers, and Website Administrators Performing Restorations
 
 ---

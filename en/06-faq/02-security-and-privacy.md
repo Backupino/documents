@@ -1,6 +1,6 @@
 # 2. Security & Privacy FAQ
 
-> **Section:** Frequently Asked Questions • **Stable Version:** 1.0.0 Official • **Last Updated:** November 2026  
+> **Section:** Frequently Asked Questions • **Stable Version:** 1.0.1 Official • **Last Updated:** November 2026  
 > **Target Audience:** Security Specialists, Network Administrators, and DPOs
 
 ---

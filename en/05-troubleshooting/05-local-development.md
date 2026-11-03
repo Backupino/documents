@@ -1,6 +1,6 @@
 # 5. Local Development Environments Troubleshooting Guide (XAMPP, Laragon, Docker)
 
-> **Section:** Troubleshooting • **Stable Version:** 1.0.0 GA • **Last Updated:** November 2026  
+> **Section:** Troubleshooting • **Stable Version:** 1.0.1 GA • **Last Updated:** November 2026  
 > **Target Audience:** Web Designers and Local Developers
 
 ---

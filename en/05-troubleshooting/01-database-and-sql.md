@@ -1,6 +1,6 @@
 # 1. Database and SQL Troubleshooting Guide
 
-> **Section:** Troubleshooting • **Stable Version:** 1.0.0 GA • **Last Updated:** November 2026  
+> **Section:** Troubleshooting • **Stable Version:** 1.0.1 GA • **Last Updated:** November 2026  
 > **Target Audience:** Developers, Host Administrators, and Debuggers
 
 ---

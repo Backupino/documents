@@ -1,6 +1,6 @@
 # 2. Timeout, 504 Gateway, and Memory Limit Troubleshooting
 
-> **Section:** Troubleshooting • **Stable Version:** 1.0.0 GA • **Last Updated:** November 2026  
+> **Section:** Troubleshooting • **Stable Version:** 1.0.1 GA • **Last Updated:** November 2026  
 > **Target Audience:** Shared Hosting Users and Server Administrators
 
 ---

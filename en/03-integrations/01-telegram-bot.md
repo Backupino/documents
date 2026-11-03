@@ -1,6 +1,6 @@
 # 1. Telegram Bot Integration & Setup Guide
 
-> **Section:** Integrations • **Stable Release:** 1.0.0 Official • **Last Updated:** November 2026  
+> **Section:** Integrations • **Stable Release:** 1.0.1 Official • **Last Updated:** November 2026  
 > **Audience:** General Users & System Administrators
 
 ---

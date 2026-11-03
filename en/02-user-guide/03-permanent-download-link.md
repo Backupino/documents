@@ -1,6 +1,6 @@
 # 3. Permanent Latest-Backup Download Link
 
-> **Section:** User Guide • **Stable Version:** 1.0.0 Official • **Last Updated:** November 2026  
+> **Section:** User Guide • **Stable Version:** 1.0.1 Official • **Last Updated:** November 2026  
 > **Audience:** WordPress Administrators, Automation Engineers, and Server Script Developers
 
 ---

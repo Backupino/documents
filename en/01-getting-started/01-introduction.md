@@ -1,6 +1,6 @@
 # 1. Introduction to Backupino & Why It Was Created
 
-> **Section:** Getting Started • **Stable Version:** 1.0.0 GA • **Last Updated:** November 2026  
+> **Section:** Getting Started • **Stable Version:** 1.0.1 GA • **Last Updated:** November 2026  
 > **Target Audience:** Web Designers, WordPress Administrators, and PHP Developers
 
 ---

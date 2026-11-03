@@ -1,6 +1,6 @@
 # 2. Package Management, Live Logs, and Disk Cleanup
 
-> **Section:** User Guide • **Stable Version:** 1.0.0 Official • **Last Updated:** November 2026  
+> **Section:** User Guide • **Stable Version:** 1.0.1 Official • **Last Updated:** November 2026  
 > **Audience:** Website Administrators and Technical Operators
 
 ---

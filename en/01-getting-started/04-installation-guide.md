@@ -1,6 +1,6 @@
 # 4. Step-by-Step Installation & Setup Guide
 
-> **Section:** Getting Started • **Stable Version:** 1.0.0 GA • **Last Updated:** November 2026  
+> **Section:** Getting Started • **Stable Version:** 1.0.1 GA • **Last Updated:** November 2026  
 > **Methods:** WordPress Directory, Zip Upload, Manual FTP / File Manager, WP-CLI
 
 ---
@@ -22,10 +22,10 @@ The quickest and simplest installation method directly within your WordPress adm
 
 If you acquired the distribution package directly from GitHub or the official website:
 
-1. Download the latest release package (e.g., `backupino-1.0.0.zip`).
+1. Download the latest release package (e.g., `backupino-1.0.1.zip`).
 2. In your WordPress admin dashboard, go to **Plugins → Add New Plugin**.
 3. At the top of the screen, click the **Upload Plugin** button.
-4. Click **Choose File** and select the downloaded `backupino-1.0.0.zip` file.
+4. Click **Choose File** and select the downloaded `backupino-1.0.1.zip` file.
 5. Click **Install Now**, and once extracted, click **Activate Plugin**.
 
 ---
@@ -34,7 +34,7 @@ If you acquired the distribution package directly from GitHub or the official we
 
 For production environments where web-based plugin uploads are disabled for security reasons:
 
-1. Extract the `backupino-1.0.0.zip` file on your local workstation to uncover the `backupino` directory.
+1. Extract the `backupino-1.0.1.zip` file on your local workstation to uncover the `backupino` directory.
 2. Connect to your web server using an SFTP/FTP client (such as FileZilla) or your hosting control panel's File Manager.
 3. Browse to the WordPress plugins directory:  
    `wp-content/plugins/`
@@ -52,7 +52,7 @@ Ideal for DevOps engineers, headless Linux servers, and automated CI/CD workflow
 wp plugin install backupino --activate
 
 # Or install from a local zip package:
-wp plugin install /path/to/backupino-1.0.0.zip --activate
+wp plugin install /path/to/backupino-1.0.1.zip --activate
 
 # Verify plugin installation status and system health:
 wp backupino status

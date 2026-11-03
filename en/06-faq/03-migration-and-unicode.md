@@ -1,6 +1,6 @@
 # 3. Migration, Unicode & Non-Latin Slugs FAQ
 
-> **Section:** Frequently Asked Questions • **Stable Version:** 1.0.0 Official • **Last Updated:** November 2026  
+> **Section:** Frequently Asked Questions • **Stable Version:** 1.0.1 Official • **Last Updated:** November 2026  
 > **Target Audience:** Web Designers, SEO Specialists, and Site Operators
 
 ---
@@ -22,4 +22,4 @@ This is a standard WordPress post-migration routing behavior when web server rew
 ## 🧭 Next Steps
 
 To explore the product roadmap and upcoming development milestones, proceed to:  
-👉 [**Version 1.0.0 Official (Free) Feature Overview**](../07-roadmap/01-features-overview.md)
+👉 [**Version 1.0.1 Official (Free) Feature Overview**](../07-roadmap/01-features-overview.md)

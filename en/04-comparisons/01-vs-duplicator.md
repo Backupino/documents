@@ -1,6 +1,6 @@
 # 1. Technical Comparison: Backupino vs. Duplicator
 
-> **Section:** Comparisons • **Stable Version:** Official 1.0.0 • **Last Updated:** November 2026  
+> **Section:** Comparisons • **Stable Version:** Official 1.0.1 • **Last Updated:** November 2026  
 > **Target Audience:** Web Designers, Developers, and Hosting Administrators
 
 ---

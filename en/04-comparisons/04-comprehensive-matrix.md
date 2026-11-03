@@ -1,6 +1,6 @@
 # 4. Comprehensive Feature Comparison Matrix (30+ Benchmarks)
 
-> **Section:** Comparisons • **Stable Version:** Official 1.0.0 • **Last Updated:** November 2026  
+> **Section:** Comparisons • **Stable Version:** Official 1.0.1 • **Last Updated:** November 2026  
 > **Target Audience:** Technical Decision Makers, Hosting Administrators, and Enterprise Clients
 
 ---

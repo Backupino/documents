@@ -1,6 +1,6 @@
 # 2. Technical Architecture & Core Engines Breakdown
 
-> **Section:** Getting Started • **Stable Version:** 1.0.0 GA • **Last Updated:** November 2026  
+> **Section:** Getting Started • **Stable Version:** 1.0.1 GA • **Last Updated:** November 2026  
 > **Target Audience:** PHP Developers, Server Administrators, and Software Architects
 
 ---

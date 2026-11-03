@@ -1,6 +1,6 @@
 # 7. Dashboard Tour and UI Architecture
 
-> **Section:** User Guide • **Stable Version:** 1.0.0 Official • **Last Updated:** November 2026  
+> **Section:** User Guide • **Stable Version:** 1.0.1 Official • **Last Updated:** November 2026  
 > **Audience:** General Users and System Administrators
 
 ---
@@ -17,7 +17,7 @@ Backupino's user interface is crafted to modern design standards, emphasizing cl
 
 ### 1. Brand Header and Top Navigation
 * Distinctive Backupino brand logo
-* Software release and stability badge (`1.0.0 Free`)
+* Software release and stability badge (`1.0.1 Free`)
 * Primary navigation tabs: **Backups** and **Settings**
 
 ### 2. Permanent Download Link Banner

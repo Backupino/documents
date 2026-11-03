@@ -1,6 +1,6 @@
 # 3. Technical Comparison: Backupino vs. All-in-One WP Migration
 
-> **Section:** Comparisons • **Stable Version:** Official 1.0.0 • **Last Updated:** November 2026  
+> **Section:** Comparisons • **Stable Version:** Official 1.0.1 • **Last Updated:** November 2026  
 > **Target Audience:** General Users, Webmasters, and Developers
 
 ---

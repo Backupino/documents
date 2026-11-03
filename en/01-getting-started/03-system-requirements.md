@@ -1,6 +1,6 @@
 # 3. System Requirements & Server Compatibility
 
-> **Section:** Getting Started • **Stable Version:** 1.0.0 GA • **Last Updated:** November 2026  
+> **Section:** Getting Started • **Stable Version:** 1.0.1 GA • **Last Updated:** November 2026  
 > **Target Audience:** System Administrators, Hosting Buyers, and WordPress Developers
 
 ---

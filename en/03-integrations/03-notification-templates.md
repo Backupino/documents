@@ -1,6 +1,6 @@
 # 3. Customizing Notification Templates & Variable Tags
 
-> **Section:** Integrations • **Stable Release:** 1.0.0 Official • **Last Updated:** November 2026  
+> **Section:** Integrations • **Stable Release:** 1.0.1 Official • **Last Updated:** November 2026  
 > **Audience:** Web Designers, Developers & Webmasters
 
 ---

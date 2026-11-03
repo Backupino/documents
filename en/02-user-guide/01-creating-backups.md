@@ -1,6 +1,6 @@
 # 1. Backup Creation Guide (Manual & Custom)
 
-> **Section:** User Guide • **Stable Version:** 1.0.0 Official • **Last Updated:** November 2026  
+> **Section:** User Guide • **Stable Version:** 1.0.1 Official • **Last Updated:** November 2026  
 > **Audience:** General Users, Webmasters, and WordPress Administrators
 
 ---
